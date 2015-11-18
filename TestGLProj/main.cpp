@@ -238,23 +238,23 @@ void keyboard(unsigned char key, int x, int y)
 	case 27: // this is an ascii value
 		exit(0);
 		break;
-	case 52:
+	case 'a':
 		bodyMat = glm::translate(bodyMat, 0.0f, 0.0f, 0.3f);
 		camPos -= cMove;
 		camCenter -= cMove;
 		break;
-	case 54:
+	case 'd':
 		bodyMat = glm::translate(bodyMat, 0.0f, 0.0f, -0.3f);
 		camPos += cMove;
 		camCenter += cMove;
 		break;
-	case 'd':
+	case 'g':
 		bodyMat = glm::rotate(bodyMat, -5.0f, 0.0f, 1.0f, 0.0f);
 
 		//if (firstPerson)
 		//view = glm::rotate(view, -5.0f, 0.0f, 1.0f, 0.0f);
 		break;
-	case 'a':
+	case 'r':
 		bodyMat = glm::rotate(bodyMat, 5.0f, 0.0f, 1.0f, 0.0f);
 
 		//if (firstPerson)
@@ -291,7 +291,7 @@ void keyboard(unsigned char key, int x, int y)
 		firstPerson = firstPerson ? false : true;
 		break;
 		*/
-	case 'j' :
+	case 32 :
 		//isjumping = true;
 		up = true;
 			//bodyMat = glm::translate(bodyMat, 0.0f, 0.3f, 0.0f);
