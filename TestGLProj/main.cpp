@@ -168,7 +168,7 @@ void display(void)
 		
 		bodyMat = glm::translate(bodyMat, 0.0f, jump, 0.0f);
 		
-		
+		//github test
 	/*		if (jump){
 
 			jump = false;
