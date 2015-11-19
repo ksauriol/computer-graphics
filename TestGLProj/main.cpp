@@ -15,6 +15,9 @@
 #include <string.h>
 #include <iostream>
 #include <string>
+#include <Windows.h>
+#include"MMSystem.h"
+using namespace std;
 
 Shader shader; // loads our vertex and fragment shaders
 
@@ -328,6 +331,14 @@ void keyboardArrow(int key, int x, int y) {
 		break;
 	}
 }
+int _sound(){
+	PlaySound(TEXT("Magic-music-loop.wav"), NULL, SND_ASYNC);
+
+
+	//system("pause");
+
+	return 0;
+}
 
 int main(int argc, char** argv)
 {
@@ -364,6 +375,7 @@ int main(int argc, char** argv)
 	plane = new Model(&shader, "models/plane.obj");
 	tree = new Model(&shader, "models/palm_tree.obj");//working
 	bench = new Model(&shader, "models/klupa117.obj", "models/");
+	_sound();
 	glutMainLoop();
 
 	return 0;
